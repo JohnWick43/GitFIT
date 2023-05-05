@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,9 @@ public class MainScreen extends Fragment {
             @Override
             public void onClick(View v) {
                 //nav logic
-                Navigation.findNavController(view).navigate(R.id.action_mainScreen_to_workout);
+                //Navigation.findNavController(view).navigate(R.id.action_mainScreen_to_workout);
+                Intent intent = new Intent(v.getContext(),WorkoutActivity.class);
+                startActivity(intent);
             }
         });
         Button diet = view.findViewById(R.id.Diet_But);
@@ -40,7 +43,9 @@ public class MainScreen extends Fragment {
             @Override
             public void onClick(View v) {
                 //nav logic
-                Navigation.findNavController(view).navigate(R.id.action_mainScreen_to_dietFragment);
+                //Navigation.findNavController(view).navigate(R.id.action_mainScreen_to_dietFragment);
+                Intent intent = new Intent(v.getContext(),DietActivity.class);
+                startActivity(intent);
             }
         });
 
